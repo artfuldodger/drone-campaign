@@ -5,32 +5,36 @@
 
 <%= render 'shared/flash_messages' %>
 
-<h2>What's the problem?</h2>
+<section>
+  <h2>What's the problem?</h2>
 
-<p>The drone caucus lists the following as one of their main goals:</p>
+  <p>The drone caucus lists the following as one of their main goals:</p>
 
-<blockquote>
-  <p>Recognize the urgent need to rapidly develop and deploy <strong>more Unmanned Systems in</strong> support of ongoing <strong>civil</strong>, military, and law enforcement <strong>operations</strong></p>
-</blockquote>
+  <blockquote>
+    <p>Recognize the urgent need to rapidly develop and deploy <strong>more Unmanned Systems in</strong> support of ongoing <strong>civil</strong>, military, and law enforcement <strong>operations</strong></p>
+  </blockquote>
 
-<p>We don't think that is okay. Why do they think that this represents the will of their constituents? They don't, but the drone manufacturers <%= link_to 'give them a lot of money', 'http://www.huffingtonpost.com/2012/05/28/drone-lobbying-companies_n_1546263.html', target: '_blank' %>. Which is more persuasive?</p>
+  <p>We don't think that is okay. Why do they think that this represents the will of their constituents? They don't, but the drone manufacturers <%= link_to 'give them a lot of money', 'http://www.huffingtonpost.com/2012/05/28/drone-lobbying-companies_n_1546263.html', target: '_blank' %>. Which is more persuasive?</p>
+</section>
 
-<h2>Let them know</h2>
+<section>
+  <h2>Let them know</h2>
 
-<p class="lead">First, sign our petition.</p>
+  <p class="lead">First, sign our petition.</p>
 
-<%= render 'signatures/form' %>
+  <%= render 'signatures/form' %>
 
-<p class="lead">Then, send your representative a letter.</p>
+  <p class="lead">Then, send your representative a letter.</p>
 
-<p>You can check what representatives in your state are members in the caucus below. If your state is not listed, then none of your representatives are in the drone caucus. You should still let them know that you oppose letting lobbying dollars define the opinions of their elected representatives.</p>
+  <p>You can check what representatives in your state are members in the caucus below. If your state is not listed, then none of your representatives are in the drone caucus. You should still let them know that you oppose letting lobbying dollars define the opinions of their elected representatives.</p>
 
-<%= render 'representatives/state_search' %>
+  <%= render 'representatives/state_search' %>
 
-<p>Now find the representative for your specific district and their contact information.</p>
+  <p>Now find the representative for your specific district and their contact information.</p>
 
-<%= render 'representatives/zip_search' %>
+  <%= render 'representatives/zip_search' %>
 
-<p class="lead">Finally, share!</p>
+  <p class="lead">Finally, share!</p>
 
-<p>Tell your friends. The Facebook and Twitter buttons on the side make it easy. We need to get the voice of the people heard over the sound of politicians counting their cash.</p>
+  <p>Tell your friends. The Facebook and Twitter buttons on the side make it easy. We need to get the voice of the people heard over the sound of politicians counting their cash.</p>
+</section>
