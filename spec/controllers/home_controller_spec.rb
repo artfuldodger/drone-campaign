@@ -13,5 +13,10 @@ describe HomeController do
       get :index
       assigns(:caucus_states).should == caucus_states
     end
+
+    it 'assigns to @signature' do
+      get :index
+      assigns(:signature).should be_a_new Signature
+    end
   end
 end

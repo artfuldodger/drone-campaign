@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130126032134) do
+ActiveRecord::Schema.define(:version => 20130126061738) do
 
   create_table "representatives", :force => true do |t|
     t.string   "name"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(:version => 20130126032134) do
   end
 
   add_index "representatives", ["state_id"], :name => "index_representatives_on_state_id"
+
+  create_table "signatures", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.boolean  "newsletter"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "states", :force => true do |t|
     t.string   "name"
