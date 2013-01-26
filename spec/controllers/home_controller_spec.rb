@@ -6,5 +6,12 @@ describe HomeController do
       get :index
       response.should render_template :index
     end
+
+    it 'assigns to @caucus_states' do
+      caucus_states = mock
+      State.stub_chain(:with_representative, :order, :uniq).and_return(caucus_states)
+      get :index
+      assigns(:caucus_states).should == caucus_states
+    end
   end
 end

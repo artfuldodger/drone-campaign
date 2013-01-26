@@ -1,5 +1,10 @@
 class State < ActiveRecord::Base
-  validates :name, :abbreviation, presence: true
+  has_many :representatives
 
+  validates :name, :abbreviation, presence: true
   attr_accessible :abbreviation, :ansi_code, :name, :statens
+
+  def self.with_representative
+    joins(:representatives)
+  end
 end
