@@ -4,7 +4,7 @@ require 'capistrano-db-tasks'
 ssh_options[:forward_agent] = true
 
 set :application, "Drone Campaign"
-set :repository,  "git@github.com:artfuldodger/dronecampaign.git"
+set :repository,  "git@github.com:artfuldodger/drone-campaign.git"
 set :user, 'ubuntu'
 set :scm, :git
 
