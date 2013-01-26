@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: drone_campaign_development
   pool: 5
-  username: dronecampaign
+  username: drone_campaign
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
