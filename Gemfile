@@ -23,3 +23,7 @@ group :development, :test do
   gem 'ZenTest', '4.8.3'
   gem 'shoulda-matchers'
 end
+
+group :development do
+  gem "capistrano-db-tasks", github: 'artfuldodger/capistrano-db-tasks'
+end

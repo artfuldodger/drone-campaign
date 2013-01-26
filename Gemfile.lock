@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/artfuldodger/capistrano-db-tasks.git
+  revision: fee43e0966a131e942819462676f8393b5d6c0d3
+  specs:
+    capistrano-db-tasks (0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -164,6 +170,7 @@ DEPENDENCIES
   ZenTest (= 4.8.3)
   autotest-rails
   capistrano
+  capistrano-db-tasks!
   coffee-rails (~> 3.2.1)
   factory_girl_rails
   jquery-rails
