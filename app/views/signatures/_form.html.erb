@@ -1,0 +1,25 @@
+<%= form_for @signature, html: { class: 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :name, class: "control-label" %>
+    <div class="controls">
+      <%= f.text_field :name %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :email, "E-mail Address", class: "control-label" %>
+    <div class="controls">
+      <%= f.text_field :email %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :newsletter, "Send me e-mails about getting money out of politics", class: "control-label" %>
+    <div class="controls">
+      <%= f.check_box :newsletter %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <%= submit_tag "Find", disable_with: 'One moment...', class: 'btn' %>
+    </div>
+  </div>
+<% end %>

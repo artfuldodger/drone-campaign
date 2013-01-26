@@ -3,6 +3,8 @@
   <p class="lead">The Congressional Unmanned Systems Caucus thinks we need them. Let them know that you won't stand idly by while the drone manufacturers buy their votes.</p>
 </div>
 
+<%= render 'shared/flash_messages' %>
+
 <h2>What's the problem?</h2>
 
 <p>The drone caucus lists the following as one of their main goals:</p>
@@ -19,54 +21,12 @@
 
 <p>You can check what representatives in your state are members in the caucus below. If your state is not listed, then none of your representatives are in the drone caucus. You should still let them know that you oppose letting lobbying dollars define the opinions of their elected representatives.</p>
 
-<%= form_tag '#', class: 'form-horizontal' do %>
-  <div class="control-group">
-    <%= label_tag 'state_id', "What's your state?", class: "control-label" %>
-    <div class="controls">
-      <%= select_tag :state_id, options_from_collection_for_select(@caucus_states, :id, :abbreviation), include_blank: true %>
-    </div>
-  </div>
-<% end %>
-
-<div id="caucus-members-in-state">
-</div>
+<%= render 'representatives/state_search' %>
 
 <p>Now find the representative for your specific district and their contact information.</p>
 
-<%= form_tag 'http://www.house.gov/htbin/findrep', method: :get, class: 'form-horizontal' do %>
-  <div class="control-group">
-    <%= label_tag 'ZIP', "What's your zip code?", class: "control-label" %>
-    <div class="controls">
-      <%= text_field_tag :ZIP %>
-      <%= submit_tag "Find", class: 'btn' %>
-    </div>
-  </div>
-<% end %>
+<%= render 'representatives/zip_search' %>
 
 <p class="lead">Then, sign our petition and share this page so your friends can contact their representatives as well. This is everyone's fight.</p>
 
-<%= form_for @signature, html: { class: 'form-horizontal' } do |f| %>
-  <div class="control-group">
-    <%= f.label :name, class: "control-label" %>
-    <div class="controls">
-      <%= f.text_field :name %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :email, "E-mail Address", class: "control-label" %>
-    <div class="controls">
-      <%= f.text_field :email %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :newsletter, "Send me e-mails about getting money out of politics", class: "control-label" %>
-    <div class="controls">
-      <%= f.check_box :newsletter %>
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="controls">
-      <%= submit_tag "Find", disable_with: 'One moment...', class: 'btn' %>
-    </div>
-  </div>
-<% end %>
+<%= render 'signatures/form' %>

@@ -1,0 +1,9 @@
+<%= form_tag 'http://www.house.gov/htbin/findrep', method: :get, class: 'form-horizontal' do %>
+  <div class="control-group">
+    <%= label_tag 'ZIP', "What's your zip code?", class: "control-label" %>
+    <div class="controls">
+      <%= text_field_tag :ZIP %>
+      <%= submit_tag "Find", class: 'btn' %>
+    </div>
+  </div>
+<% end %>
