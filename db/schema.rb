@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130126061738) do
+ActiveRecord::Schema.define(:version => 20130206062826) do
 
   create_table "representatives", :force => true do |t|
     t.string   "name"
@@ -20,8 +20,35 @@ ActiveRecord::Schema.define(:version => 20130126061738) do
     t.integer  "state_id"
     t.string   "district"
     t.string   "url"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "bioguide_id"
+    t.string   "birthday"
+    t.string   "chamber"
+    t.string   "contact_form"
+    t.string   "crp_id"
+    t.string   "facebook_id"
+    t.string   "fax"
+    t.string   "fec_ids"
+    t.string   "first_name"
+    t.string   "gender"
+    t.string   "govtrack_id"
+    t.string   "in_office"
+    t.string   "last_name"
+    t.string   "middle_name"
+    t.string   "name_suffix"
+    t.string   "nickname"
+    t.string   "office"
+    t.string   "party"
+    t.string   "phone"
+    t.string   "thomas_id"
+    t.string   "twitter_id"
+    t.string   "votesmart_id"
+    t.string   "website"
+    t.string   "youtube_id"
+    t.string   "lis_id"
+    t.string   "senate_class"
+    t.string   "state_rank"
   end
 
   add_index "representatives", ["state_id"], :name => "index_representatives_on_state_id"
